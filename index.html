@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entre Tons Studio — Psicologia & Música</title>
+  <meta name="description" content="Aulas de canto, teclado, baixo, violão e guitarra com psicologia aplicada à música. Grupos de louvor e corais em São Paulo.">
+  <meta property="og:title" content="Entre Tons Studio — Psicologia & Música">
+  <meta property="og:description" content="Onde sentimentos encontram expressão. Aulas individuais e para grupos de louvor e corais.">
+  <meta property="og:image" content="assets/frames/desktop/f_0001.webp">
+  <meta name="theme-color" content="#1a1816">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/frames/desktop/f_0001.webp">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <a href="#inicio" class="marca" aria-label="Entre Tons Studio">
+    <img src="assets/logo.jpeg" alt="Entre Tons Studio" class="marca-logo">
+  </a>
+  <nav class="menu" aria-label="Seções">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#grupos">Grupos</a>
+    <a href="#contato" class="menu-cta">Fale conosco</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ABERTURA: o vídeo toca com a rolagem -->
+  <section id="inicio" class="cine" style="--altura: 420vh">
+    <div class="cine-palco">
+      <canvas class="cine-canvas" aria-hidden="true"></canvas>
+      <div class="cine-vinheta"></div>
+
+      <div class="momento" data-de="0" data-ate="0.28">
+        <div class="painel painel--vidro">
+          <h1 class="titulo-abertura">Entre Tons Studio</h1>
+          <p class="apoio">Prof. Tarsis · Helena Maria, Osasco</p>
+        </div>
+      </div>
+      <div class="momento momento--direita" data-de="0.36" data-ate="0.64">
+        <div class="painel painel--vidro">
+          <p class="destaque">Canto, teclado, baixo, violão e guitarra com metodologia que respeita seu ritmo emocional</p>
+        </div>
+      </div>
+      <div class="momento momento--centro" data-de="0.72" data-ate="1">
+        <div class="painel painel--vidro">
+          <p class="destaque">Onde sentimentos encontram expressão — aulas individuais e para grupos de louvor e corais</p>
+          <a href="#contato" class="botao">Agende uma aula experimental</a>
+        </div>
+      </div>
+
+      <div class="cine-dica" aria-hidden="true"><span></span>role</div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="secao">
+    <img class="arte arte--direita" src="assets/img/sobre.webp" alt="" loading="lazy">
+    <div class="secao-grade">
+      <div class="painel revelar">
+        <span class="rotulo">01</span>
+        <h2>Música que acolhe</h2>
+        <p>No Entre Tons Studio, acreditamos que aprender música vai além da técnica. Cada aula é um espaço seguro onde você explora não apenas notas e acordes, mas também o que sente ao tocá-los. Nossa abordagem integra psicologia e música para que o aprendizado seja leve, significativo e duradouro.</p>
+        <p>Seja você iniciante buscando seus primeiros acordes ou músico experiente querendo aprofundar a expressão, aqui o processo é tão importante quanto o resultado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="secao secao--larga">
+    <img class="arte arte--fundo" src="assets/img/servicos.webp" alt="" loading="lazy">
+    <div class="painel painel--cabecalho revelar">
+      <span class="rotulo">02</span>
+      <h2>O que ensinamos</h2>
+    </div>
+    <div class="cartoes">
+      <article class="painel cartao revelar">
+        <h3>Canto</h3>
+        <p>Técnica vocal com atenção à saúde da voz, interpretação e conexão emocional com o repertório. Do aquecimento ao palco.</p>
+      </article>
+      <article class="painel cartao revelar">
+        <h3>Instrumentos</h3>
+        <p>Teclado, baixo, violão e guitarra. Aulas adaptadas ao seu nível, gosto musical e objetivos — do hobby à formação profissional.</p>
+      </article>
+      <article class="painel cartao revelar">
+        <h3>Psicologia & Música</h3>
+        <p>Acompanhamento que une prática musical e escuta psicológica. Para quem quer entender como a música move o que sentimos.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- GRUPOS -->
+  <section id="grupos" class="secao">
+    <img class="arte arte--esquerda" src="assets/img/grupos.webp" alt="" loading="lazy">
+    <div class="secao-grade secao-grade--direita">
+      <div class="painel revelar">
+        <span class="rotulo">03</span>
+        <h2>Para grupos de louvor e corais</h2>
+        <ol class="passos">
+          <li><strong>Diagnóstico do grupo</strong><span>Avaliamos o nível técnico e as necessidades musicais de cada integrante para montar um plano coletivo.</span></li>
+          <li><strong>Ensaios dirigidos</strong><span>Sessões focadas em harmonia, dinâmica e expressão conjunta, com exercícios práticos e repertório escolhido pelo grupo.</span></li>
+          <li><strong>Preparação para apresentações</strong><span>Trabalhamos presença de palco, confiança e coesão sonora para que o grupo soe como um só corpo.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="secao secao--contato">
+    <img class="arte arte--fundo arte--suave" src="assets/img/contato.webp" alt="" loading="lazy">
+    <div class="painel painel--form revelar">
+      <span class="rotulo">04</span>
+      <h2>Vamos conversar</h2>
+      <p>Conte um pouco sobre o que você busca. Respondemos em até 24 horas com horários disponíveis e valores.</p>
+      <form class="form" novalidate>
+        <div class="campo">
+          <label for="f-nome">Nome</label>
+          <input id="f-nome" name="nome" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label for="f-tel">WhatsApp</label>
+          <input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="campo campo--inteiro">
+          <label>Qual(is) módulo(s) te interessa?</label>
+          <div class="modulos">
+            <label class="modulo"><input type="checkbox" name="modulo" value="Canto"> Canto</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Teclado"> Teclado</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Baixo"> Baixo</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Violão"> Violão</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Guitarra"> Guitarra</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Psicologia & Música"> Psicologia & Música</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Grupo de Louvor"> Grupo de Louvor</label>
+            <label class="modulo"><input type="checkbox" name="modulo" value="Coral"> Coral</label>
+          </div>
+        </div>
+        <div class="campo campo--inteiro">
+          <label for="f-msg">Como podemos ajudar?</label>
+          <textarea id="f-msg" name="mensagem" rows="4"></textarea>
+        </div>
+        <input type="text" name="_honey" class="pote" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="botao campo--inteiro">Enviar</button>
+        <p class="form-status campo--inteiro" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="painel rodape-painel">
+    <span class="marca-texto">Entre Tons Studio</span>
+    <span>Prof. Tarsis · Helena Maria, Osasco</span>
+    <span>R. Pres. Costa e Silva, 828</span>
+    <a href="https://www.instagram.com/_entretonsstudio/" target="_blank" rel="noopener" class="rodape-insta" aria-label="Instagram">@_entretonsstudio</a>
+    <span>© <span data-ano></span> Entre Tons Studio</span>
+  </div>
+</footer>
+
+<a class="whats" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3Zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.3-4-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.5 9.8 10.2 5.2 16 5.2s10.5 4.6 10.5 10.4S21.8 26.1 16 26.1Zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg>
+</a>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
