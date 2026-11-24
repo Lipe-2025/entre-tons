@@ -213,7 +213,7 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
   transition: transform .3s var(--ease);
 }
 .flutuante-btn:hover { transform: scale(1.07); }
-.flutuante-btn svg { width: 24px; height: 24px; }
+.flutuante-btn svg { width: 24px; height: 24px; max-width: 24px; max-height: 24px; flex-shrink: 0; display: block; }
 .flutuante-btn--whats { background: #25d366; position: relative; }
 .flutuante-btn--whats::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: pulso 2.6s ease-out infinite; }
 .flutuante-btn--insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
