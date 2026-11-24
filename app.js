@@ -45,7 +45,8 @@
     };
 
     const ajustar = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      // Mobile: limita DPR a 1.5 para reduzir custo de drawImage; desktop mantém 2
+      const dpr = celular ? Math.min(window.devicePixelRatio || 1, 1.5) : Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.round(canvas.clientWidth * dpr);
       canvas.height = Math.round(canvas.clientHeight * dpr);
       desenhado = -1;
@@ -79,8 +80,11 @@
 
     const quadro = () => {
       alvo = progresso() * (total - 1);
-      atual += (alvo - atual) * 0.18; // suaviza: sensação de filme, não de slide
-      if (Math.abs(alvo - atual) < 0.05) atual = alvo;
+      // Mobile: lerp mais alto (0.35) = menos frames intermediários = menos drawImage/s
+      // Desktop: mantém 0.18 para suavidade cinematográfica
+      const lerp = celular ? 0.35 : 0.18;
+      atual += (alvo - atual) * lerp;
+      if (Math.abs(alvo - atual) < (celular ? 0.5 : 0.05)) atual = alvo;
       desenhar(Math.round(atual));
       atualizarMomentos(atual / (total - 1));
       requestAnimationFrame(quadro);
@@ -109,11 +113,12 @@
 
   /* ── Topo, revelar e ano ──────────────────────────────────────────────── */
   const topo = document.querySelector(".topo");
-  const whats = document.querySelector(".whats");
-  let formNaTela = false; // o botão flutuante se recolhe para não cobrir o "Enviar"
+  const sociais = document.querySelector(".sociais-flutuantes");
+  const whats = sociais && sociais.querySelector(".flutuante-btn--whats");
+  let formNaTela = false; // botões flutuantes se recolhem para não cobrir o "Enviar"
   const aoRolar = () => {
     topo && topo.classList.toggle("rolou", scrollY > 40);
-    whats && whats.classList.toggle("visivel", scrollY > innerHeight * 0.6 && !formNaTela);
+    sociais && sociais.classList.toggle("visivel", scrollY > innerHeight * 0.6 && !formNaTela);
   };
   const formEl = document.querySelector(".form");
   if (formEl) new IntersectionObserver(([e]) => { formNaTela = e.isIntersecting; aoRolar(); }).observe(formEl);

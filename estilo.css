@@ -73,7 +73,7 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
 /* ── Abertura cinematográfica ──────────────────────────────────────────── */
 .cine { position: relative; height: var(--altura, 400vh); }
 .cine-palco { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
-.cine-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cine-canvas { position: absolute; inset: 0; width: 100%; height: 100%; will-change: contents; }
 .cine-vinheta {
   position: absolute; inset: 0; pointer-events: none;
   background:
@@ -200,17 +200,23 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
 .botao:hover { transform: translateY(-2px); filter: brightness(1.08); }
 .botao[disabled] { opacity: .6; cursor: progress; }
 
-/* ── WhatsApp flutuante ────────────────────────────────────────────────── */
-.whats {
+/* ── Botões flutuantes (WhatsApp + Instagram) ─────────────────────────── */
+.sociais-flutuantes {
   position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); z-index: 60;
-  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
-  background: #25d366; color: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / .35);
+  display: flex; flex-direction: column; gap: 14px; align-items: center;
   transform: scale(0); transition: transform .5s var(--ease);
 }
-.whats.visivel { transform: scale(1); }
-.whats:hover { transform: scale(1.07); }
-.whats svg { width: 30px; height: 30px; }
-.whats::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: pulso 2.6s ease-out infinite; }
+.sociais-flutuantes.visivel { transform: scale(1); }
+.flutuante-btn {
+  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
+  color: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / .35); text-decoration: none;
+  transition: transform .3s var(--ease);
+}
+.flutuante-btn:hover { transform: scale(1.07); }
+.flutuante-btn svg { width: 30px; height: 30px; }
+.flutuante-btn--whats { background: #25d366; position: relative; }
+.flutuante-btn--whats::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: pulso 2.6s ease-out infinite; }
+.flutuante-btn--insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 @keyframes pulso { from { transform: scale(1); opacity: .7; } to { transform: scale(1.6); opacity: 0; } }
 
 /* ── Rodapé ────────────────────────────────────────────────────────────── */
@@ -238,8 +244,9 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
   h2 { font-size: clamp(28px, 6vw, 40px); }
   .destaque { font-size: clamp(20px, 5vw, 28px); }
   .rodape-painel { flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px 24px; }
-  .whats { width: 52px; height: 52px; right: max(12px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); }
-  .whats svg { width: 26px; height: 26px; }
+  .sociais-flutuantes { right: max(12px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); gap: 12px; }
+  .flutuante-btn { width: 52px; height: 52px; }
+  .flutuante-btn svg { width: 26px; height: 26px; }
   .topo { padding: 14px var(--gutter); }
   .marca-logo { height: 36px; }
   /* Cards de serviços em carrossel horizontal no mobile */
