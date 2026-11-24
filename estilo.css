@@ -208,12 +208,12 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
 }
 .sociais-flutuantes.visivel { transform: scale(1); }
 .flutuante-btn {
-  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
-  color: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / .35); text-decoration: none;
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  color: #fff; box-shadow: 0 8px 24px rgb(0 0 0 / .3); text-decoration: none;
   transition: transform .3s var(--ease);
 }
 .flutuante-btn:hover { transform: scale(1.07); }
-.flutuante-btn svg { width: 30px; height: 30px; }
+.flutuante-btn svg { width: 24px; height: 24px; }
 .flutuante-btn--whats { background: #25d366; position: relative; }
 .flutuante-btn--whats::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: pulso 2.6s ease-out infinite; }
 .flutuante-btn--insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
@@ -244,9 +244,9 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
   h2 { font-size: clamp(28px, 6vw, 40px); }
   .destaque { font-size: clamp(20px, 5vw, 28px); }
   .rodape-painel { flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px 24px; }
-  .sociais-flutuantes { right: max(12px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); gap: 12px; }
-  .flutuante-btn { width: 52px; height: 52px; }
-  .flutuante-btn svg { width: 26px; height: 26px; }
+  .sociais-flutuantes { right: max(12px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); gap: 10px; }
+  .flutuante-btn { width: 46px; height: 46px; }
+  .flutuante-btn svg { width: 22px; height: 22px; }
   .topo { padding: 14px var(--gutter); }
   .marca-logo { height: 36px; }
   /* Cards de serviços em carrossel horizontal no mobile */
