@@ -123,9 +123,13 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
   min-height: 100vh; padding: 18vh var(--gutter);
   display: grid; align-content: center;
 }
-.secao-grade { width: 100%; max-width: var(--largura); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 560px) 1fr; }
+.secao-grade { width: 100%; max-width: var(--largura); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 560px) 1fr; gap: 40px; align-items: center; }
 .secao-grade--direita { grid-template-columns: 1fr minmax(0, 560px); }
 .secao-grade--direita > .painel { grid-column: 2; }
+.secao-grade--professor { grid-template-columns: minmax(0, 380px) 1fr; gap: 48px; align-items: center; }
+.professor-foto { position: relative; border-radius: var(--raio); overflow: hidden; aspect-ratio: 3/4; }
+.professor-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: drop-shadow(0 8px 24px rgb(0 0 0 / .4)); }
+.professor-subtitulo { font-family: var(--fonte-titulo); font-size: clamp(18px, 1.6vw, 24px); color: var(--acento); font-style: italic; margin-bottom: 1.2em; }
 .secao--larga { gap: 28px; justify-items: center; }
 .painel--cabecalho { width: 100%; max-width: var(--largura); }
 .cartoes { width: 100%; max-width: var(--largura); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
@@ -232,8 +236,10 @@ p { margin: 0 0 1em; color: var(--texto-suave); text-wrap: pretty; }
 /* ── Celular ───────────────────────────────────────────────────────────── */
 @media (max-width: 860px) {
   .secao { padding: 14vh var(--gutter); min-height: auto; }
-  .secao-grade, .secao-grade--direita { grid-template-columns: 1fr; }
+  .secao-grade, .secao-grade--direita, .secao-grade--professor { grid-template-columns: 1fr; }
   .secao-grade--direita > .painel { grid-column: 1; }
+  .secao-grade--professor { gap: 24px; }
+  .professor-foto { max-width: 300px; margin: 0 auto; aspect-ratio: 3/4; }
   .arte--direita, .arte--esquerda { left: 0; right: 0; width: 100%; height: 70%; opacity: .55;
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 55%, transparent);
             mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 55%, transparent); }
